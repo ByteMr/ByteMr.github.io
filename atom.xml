@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-08T11:12:52.347Z</updated>
+  <updated>2018-04-09T01:20:37.927Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,22 +21,22 @@
     <link href="http://yoursite.com/2018/04/08/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF%E5%95%A6/"/>
     <id>http://yoursite.com/2018/04/08/我的博客上线啦/</id>
     <published>2018-04-08T11:06:04.000Z</published>
-    <updated>2018-04-08T11:12:52.347Z</updated>
+    <updated>2018-04-09T01:20:37.927Z</updated>
     
-    <content type="html"><![CDATA[<p>经过一番学习使用Hexo+Github pages 搭建个人博客，终于博客自己个博客上线啦。</p>]]></content>
+    <content type="html"><![CDATA[<p>使用Hexo+Github page 搭建的个人博客上线了，后续会在上面书写我的学习笔记和文章。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;经过一番学习使用Hexo+Github pages 搭建个人博客，终于博客自己个博客上线啦。&lt;/p&gt;
+        &lt;p&gt;使用Hexo+Github page 搭建的个人博客上线了，后续会在上面书写我的学习笔记和文章。&lt;/p&gt;
 
       
     
     </summary>
     
     
-      <category term="Hexo Blog" scheme="http://yoursite.com/tags/Hexo-Blog/"/>
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   
