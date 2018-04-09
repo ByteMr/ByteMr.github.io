@@ -147,23 +147,24 @@
 </li>
 <li><p><strong>在步骤4中创建的目录中执行如下命令初始化Blog</strong><br> <code>hexo init</code></p>
 </li>
-<li><strong>安装依赖包</strong><br> npm install</li>
-<li><strong>测试-创建一个篇新的博客</strong><br> hexo new “My New Post”</li>
-<li><strong>启动服务并测试本地发布</strong><br> 执行命令:<br> hexo server<br> 在浏览器输入敲回车:    <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></li>
+<li><strong>安装依赖包</strong><br> <code>npm install</code></li>
+<li><strong>测试-创建一个篇新的博客</strong><br> <code>hexo new &quot;My New Post&quot;</code></li>
+<li><strong>启动服务并测试本地发布</strong><br> 执行命令:<br> <code>hexo server</code><br> 在浏览器输入敲回车:    <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></li>
 <li><p><strong>搭桥到github</strong>  </p>
 <p> <strong>A、</strong>创建一个repository，其中[repository name]的格式必须如下:  </p>
 <pre><code>例如: yourname.github.io  
 其中yourname部分必须和github账号名一致，否则无效。  
 </code></pre><p> <strong>B、</strong>打开git bash命令行窗口，配置github账号信息,执行如下两条命令  </p>
-<pre><code>git config --global user.name &quot;yourName&quot;  
-git config --global user.email &quot;yourEmail&quot;  
+<pre><code>`git config --global user.name &quot;yourName&quot;`  
+`git config --global user.email &quot;yourEmail&quot;` 
+把yourName改为github账号，把yourEmail改为注册Github用的邮箱即可。   
 </code></pre><p> <strong>C、</strong>在git bash命令窗口中执行如下命令创建SSH  </p>
-<pre><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;  
-然后在生成的id_rsa.pub中复制其全部内容。  
+<pre><code>`ssh-keygen -t rsa -C &quot;youremail@example.com&quot;`  
+然后在生成的id_rsa.pub中复制其全部内容,双引号中的邮箱改为注册Github用的邮箱即可。  
 </code></pre><p> <strong>D、</strong>然后登入github，选择[Settings]-[SSH and GPG keys]-[New SSH key]  </p>
 <pre><code>然后粘贴上述复制的SSH public key即可。  
 </code></pre><p> <strong>E、</strong>然后在git bash命令行中执行如下命令行进行验证  </p>
-<pre><code>ssh -T git@github.com  
+<pre><code>`ssh -T git@github.com`  
 </code></pre><p> <strong>F、</strong>在blog项目根目录中找到[_config.yml]文件，使用文本编辑器打开,  </p>
 <pre><code>每个字段的冒号后面都有一个空格。 
 </code></pre><blockquote>
