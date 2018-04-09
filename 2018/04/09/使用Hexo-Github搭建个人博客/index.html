@@ -10,7 +10,7 @@
   
   <title>
     
-      我的博客上线啦 | Ansen&#39;s blog
+      使用Hexo+Github搭建个人博客 | Ansen&#39;s blog
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -126,8 +126,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>我的博客上线啦</h2>
-  <p class="post-date">2018-04-08</p>
+  <h2>使用Hexo+Github搭建个人博客</h2>
+  <p class="post-date">2018-04-09</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -135,15 +135,58 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>使用Hexo+Github page 搭建的个人博客上线了，后续会在上面书写我的学习笔记和文章。</p>
+    <section class="markdown-content"><p>本篇不在介绍Hexo和Github以及Github pages相关的东西，直接介绍我搭建的每一个步骤，如果想要了解Hexo和Github这块的东西，可以自行去百度或者google了解。</p>
+<h1 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h1><ol>
+<li><p><strong>安装node.js</strong><br> 直接去官网下载即可。<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a>,<br> node.js在我们的博客搭建过程主要提供包管理服务，<br> Node.js的包管理器npm，是全球最大的开源库生态系统。</p>
+</li>
+<li><p><strong>安装Git</strong><br> 直接官网下载即可。<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a><br> Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地<br> 处理任何或小或大的项目，版本控制。</p>
+</li>
+<li><p><strong>进入Node.js的根目录，执行如下命令安装Hexo</strong><br> <code>npm install hexo -g</code></p>
+</li>
+<li><p><strong>在磁盘上创建一个目录用来存放Blog的所有文件</strong><br> 例如 <code>E:\blog\MrByte</code></p>
+</li>
+<li><p><strong>在步骤4中创建的目录中执行如下命令初始化Blog</strong><br> <code>hexo init</code></p>
+</li>
+<li><strong>安装依赖包</strong><br> <code>npm install</code></li>
+<li><strong>测试-创建一个篇新的博客</strong><br> <code>hexo new &quot;My New Post&quot;</code></li>
+<li><strong>启动服务并测试本地发布</strong><br> 执行命令:<code>hexo server</code><br> 在浏览器输入敲回车:    <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></li>
+<li><p><strong>搭桥到github</strong>  </p>
+<p> <strong>A、</strong>创建一个repository，其中[repository name]的格式必须如下:  </p>
+<pre><code>例如: yourname.github.io  
+其中yourname部分必须和github账号名一致，否则无效。  
+</code></pre><p> <strong>B、</strong>打开git bash命令行窗口，配置github账号信息,执行如下两条命令  </p>
+<pre><code>`git config --global user.name &quot;yourName&quot;`  
+`git config --global user.email &quot;yourEmail&quot;`  
+</code></pre><p> <strong>C、</strong>在git bash命令窗口中执行如下命令创建SSH  </p>
+<pre><code>`ssh-keygen -t rsa -C &quot;youremail@example.com&quot;`  
+然后在生成的id_rsa.pub中复制其全部内容。  
+</code></pre><p> <strong>D、</strong>然后登入github，选择[Settings]-[SSH and GPG keys]-[New SSH key]  </p>
+<pre><code>然后粘贴上述复制的SSH public key即可。  
+</code></pre><p> <strong>E、</strong>然后在git bash命令行中执行如下命令行进行验证  </p>
+<pre><code>`ssh -T git@github.com`  
+</code></pre><p> <strong>F、</strong>在blog项目根目录中找到[_config.yml]文件，使用文本编辑器打开,  </p>
+<pre><code>每个字段的冒号后面都有一个空格。 
+</code></pre><blockquote>
+<p>deploy:<br>type: git<br>repository: <a href="https://ByteMr:******@github.com/ByteMr/ByteMr.github.io.git" target="_blank" rel="noopener">https://ByteMr:******@github.com/ByteMr/ByteMr.github.io.git</a><br>branch: master  </p>
+</blockquote>
+<p> 上述repositoy字段中的地址中，冒号后后面出现*号，这里应该替换成你真实的github账号密码，ByteMr则为真实的github账号</p>
+</li>
+<li><p><strong>上传到github</strong><br><strong>A、</strong>执行如下命令，这样才能将你写好的文章部署到github服务器上并让别人浏览到<br><code>npm install hexo-deployer-git --save</code><br><strong>B、</strong>发布  </p>
+<blockquote>
+<p> hexo clean<br> hexo generate<br> hexo deplo  </p>
+</blockquote>
+</li>
+<li><p><strong>测试是否发布成功</strong><br>浏览器输入：    <a href="http://yourgithubname.github.io" target="_blank" rel="noopener">http://yourgithubname.github.io</a></p>
+</li>
+</ol>
 </section>
     <!-- Tags START -->
     
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#Hexo" >
-    <span class="tag-code">Hexo</span>
+  <a href="/tags#Blog" >
+    <span class="tag-code">Blog</span>
   </a>
 
       </div>
@@ -154,13 +197,13 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-    
-      <a class="nav-right" href="/2018/04/09/使用Hexo-Github搭建个人博客/">
+      <a class="nav-left" href="/2018/04/08/我的博客上线啦/">
+        <span class="nav-arrow">← </span>
         
-          使用Hexo+Github搭建个人博客
+          我的博客上线啦
         
-        <span class="nav-arrow"> →</span>
       </a>
+    
     
   </div>
 
@@ -206,7 +249,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="nav">none</ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#搭建步骤"><span class="toc-nav-text">搭建步骤</span></a></li></ol>
     
   </div>
 </aside>
@@ -216,7 +259,7 @@
 
 <script>
   (function () {
-    var url = 'http://yoursite.com/2018/04/08/我的博客上线啦/';
+    var url = 'http://yoursite.com/2018/04/09/使用Hexo-Github搭建个人博客/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -272,7 +315,7 @@
     var gitmentConfig = "ByteMr";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "我的博客上线啦",
+        id: "使用Hexo+Github搭建个人博客",
         owner: "ByteMr",
         repo: "ByteMr.github.io",
         oauth: {
